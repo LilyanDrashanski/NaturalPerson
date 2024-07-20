@@ -1,5 +1,24 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+naturalPersonCreate:
+    path:       /naturalPerson
+    controller: App\Controller\NaturalPersonController::naturalPersonCreate
+    methods:    POST
+
+naturalPersonList:
+    path:       /naturalPerson
+    controller: App\Controller\NaturalPersonController::naturalPersonList
+    methods:    GET
+
+naturalPersonGetById:
+    path: /naturalPerson/{token}
+    controller: App\Controller\NaturalPersonController::naturalPersonGetByToken
+    methods: GET
+
+naturalPersonUpdate:
+    path: /naturalPerson/{token}
+    controller: App\Controller\NaturalPersonController::updateNaturalPerson
+    methods: PUT
+
+naturalPersonDelete:
+    path: /naturalPerson/{token}
+    controller: App\Controller\NaturalPersonController::deleteNaturalPerson
+    methods: DELETE
